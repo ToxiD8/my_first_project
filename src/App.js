@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import {Routes, Route} from 'react-router-dom'
+
+import GenerateUser from './components/GenerateUser.js'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div>
+            <header>
+                <h1>Random User Generator</h1>
+            </header>
+            <main>
+                <div className="frame card_offset">
+                    <div className="card">
+                        <Routes>
+                            <Route path="/" element={ <GenerateUser /> }>
+                            </Route>
+                        </Routes>
+                    </div>
+                </div> 
+            </main>
+        </div>
+        );
 }
 
 export default App;
