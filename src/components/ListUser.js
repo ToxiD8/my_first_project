@@ -10,11 +10,11 @@ function GenerateUser(props) {
                 <div className="user_photo horizontal_center" id="user_photo">
                     <img src={item.picture} />
                 </div>
-                <p id="user_title">Full Name</p>
-                <p id="user_value">{item.name + ' ' + item.surname}</p>
-                <p id="user_title">E-Mail Address</p>
+                <p className="user_title">Full Name</p>
+                <p className="user_value">{item.name + ' ' + item.surname}</p>
+                <p className="user_title">E-Mail Address</p>
                 <Link to='#' onClick={() => window.location = 'mailto:'+item.email}>{item.email}</Link>
-                <p id="user_title">Phone Number</p>
+                <p className="user_title">Phone Number</p>
                 <Link to='#' onClick={() => window.location = 'callto:'+item.phone}>{item.phone}</Link>
             </div>
         ))}
